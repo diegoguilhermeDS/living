@@ -1,1 +1,45 @@
 /* Desenvolva seu estilo aqui */
+/* style header */
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.875rem 0;
+    height: 6.25rem;
+}
+
+
+
+
+
+/* style main */
+.container-nav-category {
+    margin: 0 0 2.875rem 0;
+}
+
+.list-category {
+    display: flex;
+    gap: 1.25rem;
+}
+
+
+/* style footer */
+.container-footer {
+    height: 15.938rem;
+    width: 100%;
+    background-color: var(--color-grey-100);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.container-footer-infor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.container-footer-infor > span {
+    width: 551px;
+}

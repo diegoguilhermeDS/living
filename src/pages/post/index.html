@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Living</title>
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/styles/texts.css">
+    <link rel="stylesheet" href="/src/styles/colors.css">
+    <link rel="stylesheet" href="/src/styles/buttons.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <main></main>
+    <header class="container container-header">
+        <div class="container-logo">
+            <div class="logo"></div>
+            <h2 class="font-2-bold">Living</h2>
+        </div>
+        <button class="button-primary button-category-default font-4-semibold grey-2">Home</button>
+    </header>
+    <main class="container">
+        <nav class="container-nav-category">
+            <ul class="list-category">
+                <li class="font-4-semibold button-primary button-category-default gray-2">Todos</li>
+            </ul>
+        </nav>
+    </main>
+    <footer class="container-footer">
+        <div class="container container-footer-infor">
+            <div class="container-logo">
+                <div class="logo"></div>
+                <h2 class="font-2-bold white">Living</h2>
+            </div>
+            <span class="font-4-regular grey-4">
+                The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.
+            </span>
+            <button class="button-primary button-back-to-top font-4-semibold white" id="back-top">Voltar para o topo</button>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/pages/post/index.html"></script>
 </body>
 </html>

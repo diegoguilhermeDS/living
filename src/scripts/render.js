@@ -10,9 +10,9 @@ function renderNews(list) {
                     <img src="${image}" alt="imagem notícia">
                 </div>
                 <div class="container-info-card">
-                    <h2>${title}</h2>
-                    <span>${description}</span>
-                    <button class="button-access-news">Acessar conteúdo</button>
+                    <h2 class="font-3-semibold">${title}</h2>
+                    <span class="font-4-regular">${description}</span>
+                    <a href="/src/pages/post/index.html" target="_self" class="link-post font-4-semibold">Acessar conteúdo</a>
                 </div>
             </li>
         `)

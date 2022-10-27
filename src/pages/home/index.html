@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Living</title>
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header class="container-header">
+    <header class="container container-header">
         <section class="section-header-logo">
             <div class="container-logo">
                 <h2>Living</h2>
@@ -24,9 +26,9 @@
         </section>
         <img class="img-header" src="/src/assets/img/img-header.png" alt="imagem do cabeçalho">
     </header>
-    <main>
-        <nav>
-            <ul>
+    <main class="container">
+        <nav class="container-nav-category">
+            <ul class="list-category">
                 <li>Todos</li>
             </ul>
         </nav>
@@ -36,13 +38,15 @@
         </ul>
     </main>
     <footer class="container-footer">
-        <div class="container-logo">
-            <h2>Living</h2>
+        <div class="container container-footer-infor">
+            <div class="container-logo">
+                <h2>Living</h2>
+            </div>
+            <span>
+                The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.
+            </span>
+            <button class="button-back-to-top">Voltar para o topo</button>
         </div>
-        <span>
-            The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.
-        </span>
-        <button class="button-back-to-top">Voltar para o topo</button>
     </footer>
 
     <script type="module" src="/src/pages/home/index.js"></script>

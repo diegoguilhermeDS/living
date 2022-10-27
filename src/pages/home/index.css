@@ -1,1 +1,58 @@
-/* Desenvolva seu estilo aqui */
+/* style header */
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.688rem 0;
+    height: 36.25rem;
+}
+
+.section-header-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.375rem;
+}
+
+.container-slogan {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 26.875rem;
+}
+
+
+/* style main */
+.container-nav-category {
+    margin: 2.875rem 0;
+}
+
+.list-category {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.list-news {
+    display: flex;
+    gap: 2.75rem;
+    flex-wrap: wrap;
+}
+
+.container-observer {
+    background-color: lightseagreen;
+    width: 100%;
+    height: 100px;
+}
+
+/* style footer */
+.container-footer {
+    height: 15.938rem;
+    background-color: var(--color-grey-100);
+}
+
+.container-footer-infor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}

@@ -1,0 +1,43 @@
+.link-post {
+    color: var(--color-brand-100);
+    width: 141px;
+    transition: 0.3s ease;
+}
+.link-post:hover {
+    border-bottom: 1px solid var(--color-brand-100);
+}
+
+.button-primary {
+    border-radius: 2rem;
+    padding: 0.438rem 1.375rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.button-back-to-top {
+    background-color: var(--color-grey-200);
+    border: 1px solid var(--color-grey-200);
+}
+.button-back-to-top:hover {
+    background-color: var(--color-grey-300);
+    border: 1px solid var(--color-grey-300);
+    scale: 1.1;
+}
+
+.button-category-green {
+    background-color: var(--color-brand-100);
+    border: 1px solid var(--color-brand-100);
+}
+.button-category-green:hover {
+    background-color: var(--color-brand-200);
+    border: 1px solid var(--color-brand-200);
+}
+
+.button-category-default {
+    background-color: var(--color-grey-600);
+    border: 1px solid var(--color-grey-600);
+}
+.button-category-default:hover {
+    background-color: var(--color-grey-500);
+    border: 1px solid var(--color-grey-500);
+}

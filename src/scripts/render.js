@@ -6,10 +6,10 @@ function renderNews(list) {
 
         divObsever.insertAdjacentHTML("beforebegin", `
             <li class="card" id="${id}">
-                <div>
+                <div class="container-img-card">
                     <img src="${image}" alt="imagem notícia">
                 </div>
-                <div>
+                <div class="container-info-card">
                     <h2>${title}</h2>
                     <span>${description}</span>
                     <button class="button-access-news">Acessar conteúdo</button>

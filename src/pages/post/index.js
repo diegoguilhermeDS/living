@@ -3,15 +3,22 @@
 import { AccessNews } from "../../scripts/api.js";
 import toBackTop from "../../scripts/backTop.js";
 import { getLocalStorage } from "../../scripts/getAndSetLocalStorage.js";
+import getCategories from "../../scripts/getCategories.js";
+import { renderCategories } from "../../scripts/render.js";
 
+
+const categories = await getCategories()
+
+renderCategories(categories)
 
 toBackTop()
+
+
 
 async function renderNewsSelected() {
     let idNews = getLocalStorage("@kenzie: idPost")
     let newSelected = await AccessNews(idNews)
 
-    console.log(newSelected)
     const {title, description, content, image} = newSelected
     const navContainer = document.querySelector("nav")
 

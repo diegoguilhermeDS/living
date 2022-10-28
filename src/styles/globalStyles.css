@@ -27,9 +27,15 @@
   --font-size-4: 1rem;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .container {
   margin: 0 auto;
+  width: 100%;
   max-width: 1200px;
 }
 

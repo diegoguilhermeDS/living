@@ -5,6 +5,7 @@
     justify-content: space-between;
     padding: 4.688rem 0;
     height: 36.25rem;
+    width: 100%;
 }
 
 .section-header-logo {
@@ -21,6 +22,11 @@
     width: 26.875rem;
 }
 
+.container-observer {
+    width: 100%;
+    height: 100px;
+    background-color: yellowgreen;
+}
 
 /* style main */
 .container-nav-category {
@@ -36,6 +42,7 @@
     display: flex;
     gap: 2.75rem;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 
@@ -50,6 +57,7 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
 }
 
 .container-footer-infor > span {

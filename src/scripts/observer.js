@@ -1,19 +1,21 @@
 import { getNews } from "./api.js"
-import { renderNews } from "./render.js"
+import { page, renderNews } from "./render.js"
 
-let page = 0
 
+let pag = page
 
 const observe = new IntersectionObserver(async (entries) => {
-    if (entries.some((entry) => entry.isIntersecting)) {
-        if (page < 3) {
-            const ListNews = await getNews(page++)
+    if (entries.some((entry) => entry.isIntersecting)) { 
+        console.log(pag)
+        if (pag < 3) {
+            const ListNews = await getNews(pag++)
             renderNews(ListNews)
-        }
+        } 
       }
 })
 
 
 export {
-    observe
+    observe,
+    page
 }

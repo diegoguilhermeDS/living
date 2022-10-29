@@ -1,1 +1,69 @@
 /* Desenvolva seu estilo aqui */
+/* style header */
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.875rem 0;
+    height: 6.25rem;
+}
+
+
+
+
+
+/* style main */
+.container-main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+}
+
+.container-nav-category {
+    margin: 0 0 2.875rem 0;
+}
+
+.list-category {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 5rem 0;
+}
+
+.section-title > h1 {
+    width: 700px;
+}
+
+.section-img {
+    width: 100%;
+    height: 25rem;
+}
+
+.section-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* style footer */
+.container-footer {
+    height: 15.938rem;
+    background-color: var(--color-grey-100);
+    margin-top: 2rem;
+}
+
+.container-footer-infor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.container-footer-infor > span {
+    width: 551px;
+}

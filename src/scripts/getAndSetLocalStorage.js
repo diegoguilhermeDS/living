@@ -1,5 +1,5 @@
 export function getLocalStorage(type) {
-    return JSON.parse(localStorage.getItem(`${type}`))
+    return JSON.parse(localStorage.getItem(`${type}`)) || []
 }
 
 export function setLocalStorage(type, data) {

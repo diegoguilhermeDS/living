@@ -31,37 +31,7 @@ function renderCategories(list) {
         listCategories.appendChild(tagLi)
     })
 
-    const btnsCategory = document.querySelectorAll("#category")
-
-    btnsCategory.forEach((btn) => {
-        btn.addEventListener("click", async (e) => {
-            let btnSelected = e.target
-            let btnCurrency = document.querySelector(".button-category-green")
-         
-            if (location.pathname == "/src/pages/home/index.html") {
-
-                btnCurrency.classList.remove("button-category-green", "white", "currency")
-                btnCurrency.classList.add("button-category-default", "grey-2", "old")
-
-                btnSelected.classList.remove("button-category-default", "grey-2", "old")
-                btnSelected.classList.add("button-category-green", "white", "currency")
-
-
-                let listCards = document.querySelectorAll(".card")
-                
-                setLocalStorage("@kenzie: categoryCurrency", btnSelected.innerText)
-                const ListNews = await getNews(0)
-                renderNews(ListNews)
-
-                listCards.forEach((card) => {
-                    card.remove()
-                })
-            } else if (location.pathname == "/src/pages/post/index.html") {
-                location.replace("/src/pages/home/index.html")
-                setLocalStorage("@kenzie: categoryCurrency", btnSelected.innerText)
-            }
-        })
-    })
+    eventBtnCategories()
 }
 
 
@@ -109,6 +79,41 @@ function renderNews(list) {
             let id = e.path[2].id
             setLocalStorage("@kenzie: idPost", id)
             location.replace("/src/pages/post/index.html")
+        })
+    })
+}
+
+
+function eventBtnCategories() {
+    const btnsCategory = document.querySelectorAll("#category")
+
+    btnsCategory.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+            let btnSelected = e.target
+            let btnCurrency = document.querySelector(".button-category-green")
+         
+            if (location.pathname == "/src/pages/home/index.html") {
+
+                btnCurrency.classList.remove("button-category-green", "white", "currency")
+                btnCurrency.classList.add("button-category-default", "grey-2", "old")
+
+                btnSelected.classList.remove("button-category-default", "grey-2", "old")
+                btnSelected.classList.add("button-category-green", "white", "currency")
+
+
+                let listCards = document.querySelectorAll(".card")
+                
+                setLocalStorage("@kenzie: categoryCurrency", btnSelected.innerText)
+                const ListNews = await getNews(0)
+                renderNews(ListNews)
+
+                listCards.forEach((card) => {
+                    card.remove()
+                })
+            } else if (location.pathname == "/src/pages/post/index.html") {
+                location.replace("/src/pages/home/index.html")
+                setLocalStorage("@kenzie: categoryCurrency", btnSelected.innerText)
+            }
         })
     })
 }

@@ -1,10 +1,10 @@
 /* Desenvolva seu script aqui */
-import { getNews } from "../../scripts/api.js";
 import toBackTop from "../../scripts/backTop.js";
 import { getLocalStorage, setLocalStorage } from "../../scripts/getAndSetLocalStorage.js";
 import getCategories from "../../scripts/getCategories.js";
 import { observe } from "../../scripts/observer.js";
-import { renderCategories, renderNews } from "../../scripts/render.js";
+import { renderCategories } from "../../scripts/render.js";
+import eventScrollCategories from "../../scripts/scrollCategories.js";
 
 
 if (getLocalStorage("@kenzie: categoryCurrency") == 0) {
@@ -27,9 +27,13 @@ btnsCategory.forEach((btn) => {
     }
 })
 
+eventScrollCategories()
+
 
 const divObsever = document.querySelector(".container-observer")
 
 observe.observe(divObsever)
 
 toBackTop()
+
+

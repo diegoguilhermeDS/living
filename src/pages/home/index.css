@@ -31,17 +31,69 @@
 /* style main */
 .container-nav-category {
     margin: 0 0 2.875rem 0;
+    position: relative;
 }
 
 .list-category {
     display: flex;
     gap: 1.25rem;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.list-category::-webkit-scrollbar {
+    overflow: hidden;
+    height: 10px;
+}
+.list-category::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-grey-300);
+    border-radius: 8px;
+}
+
+.smoke {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    box-shadow: inset -20px 0px 20px 0px rgb(255, 255, 255);
+}
+
+.btn-arrow {
+    position: absolute;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.btn-arrow:hover {
+    background-color: var(--color-grey-400);
+}
+.btn-arrow:disabled {
+    opacity: 40%;
+    background-color: transparent;
+}
+
+
+.btn-arrow > img {
+    opacity: 0.7;
+}
+.btn-arrow:hover > img {
+    opacity: 1;
+}
+.btn-arrow:disabled:hover > img {
+    opacity: 0.7;
 }
 
 .list-news {
     display: flex;
     gap: 2.75rem;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
 }
 

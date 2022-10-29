@@ -1,4 +1,5 @@
 /* Desenvolva seu script aqui */
+import { getNews } from "../../scripts/api.js";
 import toBackTop from "../../scripts/backTop.js";
 import { getLocalStorage, setLocalStorage } from "../../scripts/getAndSetLocalStorage.js";
 import getCategories from "../../scripts/getCategories.js";
@@ -30,10 +31,10 @@ btnsCategory.forEach((btn) => {
 eventScrollCategories()
 
 
-const divObsever = document.querySelector(".container-observer")
+setTimeout(() => {
+    const divObsever = document.querySelector(".container-observer")
 
-observe.observe(divObsever)
+    observe.observe(divObsever)
+}, 1000)
 
 toBackTop()
-
-

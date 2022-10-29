@@ -1,7 +1,6 @@
 import { getNews } from "./api.js"
 import { getLocalStorage, setLocalStorage } from "./getAndSetLocalStorage.js"
 
-let page = 1
 
 function renderCategories(list) {
     const listCategories = document.querySelector(".list-category")
@@ -35,7 +34,7 @@ function renderCategories(list) {
 }
 
 
-function renderNews(list) {
+async function renderNews(list) {
     const divObsever = document.querySelector(".container-observer")
 
     let category = getLocalStorage("@kenzie: categoryCurrency")
@@ -45,14 +44,30 @@ function renderNews(list) {
         filteredList = list.filter((news) => {
             if (news.category === category) {
                 return news
-            }
+            } 
         })
+        
+        if (filteredList == 0){
+            let pag = getLocalStorage("@kenzie: page")
+            
+            if (pag < 3) {
+                pag = 2
+
+                let newList = await getNews(pag)
+                renderNews(newList)
+                setTimeout(() => {
+                    pag++
+                    setLocalStorage("@kenzie: page", pag)
+                }, 1000)
+                
+            }
+        }
+
     } else {
         filteredList = list
     }
+
     
-
-
     filteredList.forEach((news) => {
         const { id, title, description, image } = news
 
@@ -91,7 +106,8 @@ function eventBtnCategories() {
         btn.addEventListener("click", async (e) => {
             let btnSelected = e.target
             let btnCurrency = document.querySelector(".button-category-green")
-         
+            setLocalStorage("@kenzie: page", 1)
+
             if (location.pathname == "/src/pages/home/index.html") {
 
                 btnCurrency.classList.remove("button-category-green", "white", "currency")
@@ -122,5 +138,4 @@ function eventBtnCategories() {
 export {
     renderNews,
     renderCategories,
-    page
 }

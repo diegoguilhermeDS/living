@@ -13,7 +13,7 @@ export async function getNews(page) {
             const request = await response.json()
             
             if (request.nextPage <= 3) {
-                return request.news
+                return await request.news
             }
         } else {
             alert('algo deu errado')

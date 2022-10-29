@@ -2,9 +2,14 @@
 
 import { AccessNews } from "../../scripts/api.js";
 import toBackTop from "../../scripts/backTop.js";
-import { getLocalStorage } from "../../scripts/getAndSetLocalStorage.js";
+import { getLocalStorage, setLocalStorage } from "../../scripts/getAndSetLocalStorage.js";
 import getCategories from "../../scripts/getCategories.js";
 import { renderCategories } from "../../scripts/render.js";
+
+
+let body = document.querySelector("body")
+
+body.style.height = "244vh";
 
 
 const categories = await getCategories()
@@ -45,6 +50,7 @@ function toBackHome(){
 
     btnHome.addEventListener("click", () => {
         location.replace("/src/pages/home/index.html")
+        setLocalStorage("@kenzie: categoryCurrency", "Todos")
     })
 }
 

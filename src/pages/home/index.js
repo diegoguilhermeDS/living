@@ -1,40 +1,23 @@
-/* Desenvolva seu script aqui */
 import { getNews } from "../../scripts/api.js";
 import toBackTop from "../../scripts/backTop.js";
 import { getLocalStorage, setLocalStorage } from "../../scripts/getAndSetLocalStorage.js";
-import getCategories from "../../scripts/getCategories.js";
 import { observe } from "../../scripts/observer.js";
-import { renderCategories } from "../../scripts/render.js";
-import eventScrollCategories from "../../scripts/scrollCategories.js";
+import { renderNews } from "../../scripts/render.js";
 
-
-if (getLocalStorage("@kenzie: categoryCurrency") == 0) {
-    setLocalStorage("@kenzie: categoryCurrency", "Todos")
+setLocalStorage("@living:offset", 6)
+let offsetByLocalStorage = getLocalStorage("@living:offset")
+if (offsetByLocalStorage.length <= 0) {
+    offsetByLocalStorage = 6
+    setLocalStorage("@living:offset", 6)
 }
 
-
-const categories = await getCategories()
-
-renderCategories(categories)
-
-
-const btnsCategory = document.querySelectorAll("#category")
-
-btnsCategory.forEach((btn) => {
-    let cat = getLocalStorage("@kenzie: categoryCurrency")
-    if(cat === btn.innerText) {
-        let name = btn.getAttribute("name")
-        document.getElementsByName(name)[0].click()
-    }
-})
-
-eventScrollCategories()
-
-
+console.log(offsetByLocalStorage)
 setTimeout(() => {
     const divObsever = document.querySelector(".container-observer")
 
     observe.observe(divObsever)
 }, 1000)
 
-toBackTop()
+toBackTop();
+const news = await getNews(6, offsetByLocalStorage);
+renderNews(news);
